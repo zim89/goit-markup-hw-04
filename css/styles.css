@@ -98,18 +98,6 @@ ol {
   overflow: hidden;
 }
 
-/* .accent {
-  color: var(--primary-brand-color);
-}
-
-.light {
-  color: var(--light-color);
-}
-
-.text-center {
-  text-align: center;
-} */
-
 .container {
   width: 1158px;
   margin-left: auto;
@@ -128,7 +116,7 @@ ol {
   font-size: 36px;
   line-height: 1.11;
   letter-spacing: 0.02em;
-  color: var(--dark-color);
+  color: var(--text-dark-color);
 
   text-align: center;
   text-transform: capitalize;
@@ -139,7 +127,7 @@ ol {
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
-  color: var(--dark-color);
+  color: var(--text-dark-color);
 }
 
 .section .text {
@@ -163,21 +151,13 @@ ol {
   letter-spacing: 0.04em;
   border: none;
   border-radius: 4px;
-  color: var(--text-white-color);
-  background-color: var(--bg-brand-color);
-}
-
-.btn.active,
-.btn:hover,
-.btn:focus {
-  color: var(--text-white-color);
-  background-color: var(--bg-pressed-color);
 }
 
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
 }
+
 .pt-0 {
   padding-top: 0;
 }
@@ -271,6 +251,14 @@ ol {
 .btn-hero {
   margin-top: 48px;
   padding: 16px 32px;
+  color: var(--text-white-color);
+  background-color: var(--bg-brand-color);
+}
+
+.btn-hero:hover,
+.btn-hero:focus {
+  color: var(--text-white-color);
+  background-color: var(--bg-pressed-color);
 }
 
 /*? ---------------------- */
@@ -285,7 +273,7 @@ ol {
 }
 
 .skills-list > .item:not(:last-child) {
-  margin-right: var(--card-col-gap);
+  margin-right: var(--col-gap);
 }
 
 /*? ---------------------- */
@@ -361,18 +349,32 @@ ol {
   margin-right: 24px;
 }
 
+.btn-portfolio {
+  color: var(--text-brand-color);
+  background-color: var(--bg-light-color);
+  border: 1px solid var(--accent-color);
+}
+
+.btn-portfolio.active,
+.btn-portfolio:hover,
+.btn-portfolio:focus {
+  color: var(--text-white-color);
+  background-color: var(--bg-pressed-color);
+  border-color: var(--bg-pressed-color);
+}
+
 .portfolio-cards {
   display: flex;
   flex-wrap: wrap;
 
-  margin-top: calc(-1 * var(--card-row-gap));
-  margin-left: calc(-1 * var(--card-col-gap));
+  margin-top: calc(-1 * var(--row-gap));
+  margin-left: calc(-1 * var(--col-gap));
 }
 
 .portfolio-cards > .item {
-  flex-basis: calc(100% / 3 - var(--card-col-gap));
-  margin-top: var(--card-row-gap);
-  margin-left: var(--card-col-gap);
+  flex-basis: calc(100% / 3 - var(--col-gap));
+  margin-top: var(--row-gap);
+  margin-left: var(--col-gap);
 }
 
 .portfolio-cards .card-content {
