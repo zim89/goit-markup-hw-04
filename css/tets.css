@@ -1,0 +1,25 @@
+.btn-hero {
+  padding: 16px 32px;
+  background: #4d5ae5;
+
+  /* identical to box height, or 150% */
+  color: #ffffff;
+}
+/* ------------------- */
+.btn-pressed {
+  background: #404bbf;
+
+  /* identical to box height, or 150% */
+
+  color: #ffffff;
+}
+/* ----------------------- */
+.btn {
+  background: #f4f4fd;
+  border: 1px solid #e7e9fc;
+  /* identical to box height, or 150% */
+
+  /* IRIS */
+
+  color: #4d5ae5;
+}

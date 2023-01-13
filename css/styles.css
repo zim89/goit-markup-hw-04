@@ -1,30 +1,43 @@
 :root {
-  --primary-font: 'Roboto', sans-serif;
-  /* IRIS: CTAs Focused Active states Links */
-  --primary-brand-color: #4d5ae5;
-  --pressed-state-color: #404bbf;
+  /* FONTS */
+  --font-primary: 'Roboto', sans-serif;
+  --font-secondary: 'Raleway', sans-serif;
 
-  /* NAVY BLUE: Overlays Shadows Headings */
-  --dark-color: #2e2f42;
+  /* COLOR */
+  --accent-color: #e7e9fc; /* CORNFLOWER */
 
-  /* GREEN: Valid fields Success messages */
-  --sucsses-color: #31d0aa;
+  /* TEXT COLOR */
+  --text-color: #434455; /* SLATE */
+  --text-subtle-color: #8e8f99; /* LIGHT SLATE */
 
-  /* SLATE: */
-  --primary-text-color: #434455;
+  --text-dark-color: #2e2f42; /* NAVY BLUE */
+  --text-white-color: #fff; /* WHITE */
+  --text-light-color: #f4f4fd; /* CLOUD */
 
-  /* LIGHT SLATE: Helper text Deemphasized text */
-  --subtle-text-color: #8e8f99;
+  --text-active-color: #404bbf; /* OCEAN */
+  --text-brand-color: #4d5ae5; /* IRIS */
+  --text-accent-color: #e7e9fc; /* CORNFLOWER */
 
-  /* CORNFLOWER: Accent color Hairlines Subtle backgrounds */
-  --accent-color: #e7e9fc;
+  --text-success-color: #31d0aa; /* GREEN */
+  --text-success75-color: rgba(49, 208, 170, 0.75);
+  --text-success50-color: rgba(49, 208, 170, 0.5);
+  --text-success10-color: rgba(49, 208, 170, 0.1);
 
-  /* CLOUD: Light mode backgrounds Light mode Dialogs/alerts  */
-  --light-color: #f4f4fd;
-  --white-color: #ffffff;
+  /* BACKGROUND COLOR */
+  --bg-brand-color: #4d5ae5; /* IRIS */
+  --bg-pressed-color: #404bbf; /* OCEAN */
 
-  --card-col-gap: 24px;
-  --card-row-gap: 48px;
+  --bg-primary-color: #fff; /* WHITE */
+  --bg-dark-color: #2e2f42; /* NAVY BLUE */
+  --bg-accent-color: #e7e9fc; /* CORNFLOWER */
+  --bg-light-color: #f4f4fd; /* CLOUD */
+
+  --bg-modal-color: rgba(46, 47, 66, 0.4); /* NAVY BLUE MODAL*/
+  --bg-hero-color: rgba(46, 47, 66, 0.7); /* GREY */
+
+  /* OTHER */
+  --col-gap: 24px;
+  --row-gap: 48px;
 }
 
 html {
@@ -38,11 +51,11 @@ html {
 }
 
 body {
-  font-family: var(--primary-font);
+  font-family: var(--font-primary);
   font-size: 16px;
   letter-spacing: 0.02em;
-  color: var(--primary-text-color);
-  background-color: var(--white-color);
+  color: var(--text-color);
+  background-color: var(--bg-primary-color);
 }
 
 h1,
@@ -68,11 +81,6 @@ ol {
   padding-left: 0;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
 /*! ---------------------- */
 /*! COMMON Rules           */
 /*! ---------------------- */
@@ -90,7 +98,7 @@ a {
   overflow: hidden;
 }
 
-.accent {
+/* .accent {
   color: var(--primary-brand-color);
 }
 
@@ -100,35 +108,7 @@ a {
 
 .text-center {
   text-align: center;
-}
-
-.btn {
-  display: block;
-  cursor: pointer;
-  padding: 12px 24px;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.04em;
-  color: var(--primary-brand-color);
-  background-color: var(--light-color);
-  border: 1px solid var(--accent-color);
-  border-radius: 4px;
-}
-
-.btn.active,
-.btn:hover,
-.btn:focus {
-  color: var(--white-color);
-  background-color: var(--pressed-state-color);
-  border-color: var(--pressed-state-color);
-}
-
-.mx-auto {
-  margin-left: auto;
-  margin-right: auto;
-}
+} */
 
 .container {
   width: 1158px;
@@ -167,6 +147,37 @@ a {
   margin-top: 8px;
 }
 
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.btn {
+  display: block;
+  cursor: pointer;
+  padding: 12px 24px;
+  font-family: var(--font-primary);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  border: none;
+  border-radius: 4px;
+  color: var(--text-white-color);
+  background-color: var(--bg-brand-color);
+}
+
+.btn.active,
+.btn:hover,
+.btn:focus {
+  color: var(--text-white-color);
+  background-color: var(--bg-pressed-color);
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
 .pt-0 {
   padding-top: 0;
 }
@@ -174,11 +185,11 @@ a {
 /*? ---------------------- */
 /*? HEADER                 */
 /*? ---------------------- */
-.header-wrap {
+.header {
   border-bottom: 1px solid var(--accent-color);
 }
 
-.header-wrap .container {
+.header .container {
   display: flex;
   padding-top: 24px;
   padding-bottom: 24px;
@@ -187,52 +198,56 @@ a {
 .logo {
   margin-right: 76px;
 
-  font-family: 'Raleway', sans-serif;
+  font-family: var(--font-secondary);
   font-weight: 800;
   font-size: 18px;
   line-height: 1.33;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: var(--dark-color);
+  color: var(--text-brand-color);
 }
 
-.site-nav {
+.header .hl-accent {
+  color: var(--text-dark-color);
+}
+
+.header-nav {
   display: flex;
 }
 
-.site-nav .item:not(:last-child) {
+.header-nav .item:not(:last-child) {
   margin-right: 40px;
 }
 
-.site-nav .link {
+.header-nav .link {
   font-weight: 500;
   line-height: 1.5;
-  color: var(--dark-color);
+  color: var(--text-dark-color);
 }
 
-.site-nav .link.active {
-  color: var(--pressed-state-color);
+.header-nav .link.active {
+  color: var(--text-active-color);
 }
 
-.contacts-nav {
+.header-contacts {
   display: flex;
   margin-left: auto;
 }
 
-.contacts-nav .item:not(:last-child) {
+.header-contacts .item:not(:last-child) {
   margin-right: 40px;
 }
 
-.contacts-nav .link {
+.header-contacts .link {
   line-height: 1.5;
-  color: var(--primary-text-color);
+  color: var(--text-color);
 }
 
-.site-nav .link:hover,
-.site-nav .link:focus,
-.contacts-nav .link:hover,
-.contacts-nav .link:focus {
-  color: var(--pressed-state-color);
+.header-nav .link:hover,
+.header-nav .link:focus,
+.header-contacts .link:hover,
+.header-contacts .link:focus {
+  color: var(--text-active-color);
 }
 
 /*? ---------------------- */
@@ -241,12 +256,11 @@ a {
 .hero {
   padding-top: 188px;
   padding-bottom: 188px;
-
-  background-color: var(--dark-color);
+  background-color: var(--bg-hero-color);
 }
 
-.title-hero {
-  color: var(--white-color);
+.hero-title {
+  color: var(--text-white-color);
   font-weight: 700;
   font-size: 56px;
   line-height: 1.07;
@@ -257,9 +271,6 @@ a {
 .btn-hero {
   margin-top: 48px;
   padding: 16px 32px;
-  color: var(--white-color);
-  background-color: var(--primary-brand-color);
-  border-color: var(--primary-brand-color);
 }
 
 /*? ---------------------- */
@@ -294,7 +305,7 @@ a {
 /*? TEAM section           */
 /*? ---------------------- */
 .team {
-  background-color: var(--light-color);
+  background-color: var(--bg-light-color);
 }
 
 .team-list {
@@ -304,7 +315,7 @@ a {
 
 .team-list > .item {
   flex-basis: calc(100% / 4);
-  background-color: var(--white-color);
+  background-color: var(--bg-primary-color);
   border-radius: 0px 0px 4px 4px;
 }
 
@@ -320,22 +331,21 @@ a {
 /*? FOOTER                 */
 /*? ---------------------- */
 
-.footer-wrap {
+.footer {
   padding: 100px 0;
-  background-color: var(--dark-color);
-  color: var(--accent-color);
+  background-color: var(--bg-dark-color);
 }
 
-.footer-wrap .logo {
-  margin-right: 0;
-  color: var(--light-color);
+.footer .fl-accent {
+  color: var(--text-light-color);
 }
 
-.footer-wrap .text {
+.footer .text {
   display: block;
   margin-top: 16px;
   line-height: 1.5;
   max-width: 270px;
+  color: var(--text-accent-color);
 }
 
 /*? ---------------------- */
